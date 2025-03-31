@@ -1,1 +1,0 @@
-print("Hello, World ! The script is running successfully !")
