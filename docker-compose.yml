@@ -1,0 +1,21 @@
+services:
+  sqlite:
+    image: keinos/sqlite3:latest
+    container_name: sqlite_container
+    volumes:
+      - db_data:/data
+    command: ["tail", "-f", "/dev/null"]
+
+  scripts:
+    depends_on:
+      - sqlite
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - db_data:/data
+    container_name: brief_projet
+    command: ["tail", "-f", "/dev/null"]
+
+volumes:
+  db_data:
