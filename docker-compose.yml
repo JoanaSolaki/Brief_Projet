@@ -13,6 +13,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      - ./scripts:/app/scripts
       - db_data:/data
     container_name: brief_projet
     command: ["tail", "-f", "/dev/null"]
