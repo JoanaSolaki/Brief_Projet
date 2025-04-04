@@ -1,0 +1,19 @@
+Résultats d'analyse : 
+
+Chiffre d'affaire total : 5268,78€
+
+Ventes par produit : 
+Produit D = 1679.79€
+Produit E = 1399.65€
+Produit A = 1199.76€
+Produit B = 539.73€
+Produit C = 449.85€
+
+Ventes par ville :
+Lyon = 1059.79€     
+Marseille = 1009.73€
+Bordeaux = 829.81€  
+Paris = 799.8€      
+Nantes = 739.83€    
+Strasbourg = 579.89€
+Lille = 249.93€

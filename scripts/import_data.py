@@ -78,10 +78,10 @@ except Exception as e:
 
 def calcul_ca():
     query = """
-        SELECT SUM(p.prix * v.quantite) AS chiffre_affaires_total
-        FROM vente v
-        JOIN produit p ON v.id_produit = p.id_produit;
-    """
+            SELECT SUM(p.prix * v.quantite) AS chiffre_affaires_total
+            FROM vente v
+            JOIN produit p ON v.id_produit = p.id_produit;
+        """
     cursor.execute(query)
     result = cursor.fetchone()
     total_ca = result[0] if result[0] is not None else 0.0
@@ -94,12 +94,12 @@ def calcul_ca():
 
 def calcul_vente_pdt():
     query = """
-        SELECT p.nom, SUM(v.quantite) AS total_quantite, SUM(p.prix * v.quantite) AS chiffre_affaires
-        FROM vente v
-        JOIN produit p ON v.id_produit = p.id_produit
-        GROUP BY p.nom
-        ORDER BY chiffre_affaires DESC;
-    """
+            SELECT p.nom, SUM(v.quantite) AS total_quantite, SUM(p.prix * v.quantite) AS chiffre_affaires
+            FROM vente v
+            JOIN produit p ON v.id_produit = p.id_produit
+            GROUP BY p.nom
+            ORDER BY chiffre_affaires DESC;
+        """
     cursor.execute(query)
     results = cursor.fetchall()
 
