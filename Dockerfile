@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./scripts/create_db.py" ]
+CMD [ "sh", "-c", "python ./scripts/create_db.py && python ./scripts/import_data.py" ]
